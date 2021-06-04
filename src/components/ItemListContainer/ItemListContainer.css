@@ -1,0 +1,19 @@
+.itemListContainer{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top:3em;
+}
+
+.itemListContainer h1{
+    color:#21475A;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.itemListContainer p{
+    color:#21475A;
+    font-size: 16px;
+    
+}

@@ -28,7 +28,7 @@
 }
 
 
-.navLinks a{
+.navLinks li{
     font-weight: 600;
     font-size: 16px;
     color:#21475A;
@@ -37,16 +37,18 @@
     text-decoration: none;
 }
 
-.navLinks a:hover{
+.navLinks li:hover{
     color:#6EBDAA;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .navBarIcons{
     padding-right: 1em;
+    display: flex;
 }
 
-.navBarIcons a{
+.navBarIcons div{
     justify-content: flex-end;
     margin-right: 1em;
 }
