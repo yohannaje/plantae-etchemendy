@@ -5,7 +5,7 @@ import {itemCountStyle} from './itemCountStyle';
 
 const useStyles = makeStyles((theme) => itemCountStyle(theme));
 
-export const ItemCount = ({stock, initial}) => {
+export const ItemCount = ({stock, initial, onAdd}) => {
     const classes = useStyles();
     const [count,setCount] = useState(initial); 
     //contador inicializado en valor inicial
@@ -16,8 +16,11 @@ export const ItemCount = ({stock, initial}) => {
         setCount(count + 1); //sumar uno al contador (el maximo sera igual al stock disponible)
         
         } 
-        
     } 
+
+    //function onAdd(count){    ??????
+
+    //};
 
     const handleDecrement = () => {
         if (count > 1){
