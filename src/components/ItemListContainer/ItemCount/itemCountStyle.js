@@ -3,6 +3,8 @@ export const itemCountStyle = theme =>{
 
     return ({
         counterGroup:{
+            marginTop:'2em',
+            marginBottom:'3em',
             display:'flex',
             justifyContent:'center',
             '& :hover':{
