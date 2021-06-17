@@ -6,19 +6,19 @@ import { TagWidget } from "../../NavBar/TagWidget/TagWidget.js";
 
 //const useStyles = makeStyles((theme) => ItemStyle(theme));
 
-export const Item = ({ categ, img, alt, title, descr, price }) => {
+export const Item = ({ key, item }) => {
   // const classes = useStyles();
 
   return (
-    <div className="card">
-      <img src={img} alt={alt}></img>
+    <div key={key} className="card">
+      <img src={item.img} alt={item.alt}></img>
 
-      <h4>{categ}</h4>
-      <h3 className="plantTitle">{title}</h3>
-      <p className="descr">{descr}</p>
+      <h4>{item.categ}</h4>
+      <h3 className="plantTitle">{item.title}</h3>
+      <p className="descr">{item.descr}</p>
       <div className="pricediv">
         <TagWidget />
-        <p className="price">{price}</p>
+        <p className="price">{item.price}</p>
       </div>
       <div className="cardbuttons">
         <button className="buyItem">Comprar</button>

@@ -8,14 +8,8 @@ export const ItemList=({items}) => {
     return <div>
     {    
         items.map((item, i) =>{
-            return <div key={i} className="ListContainer">
-                    <Item 
-                    img={item.img} 
-                    title={item.name} 
-                    alt={item.name}
-                    categ={item.category} 
-                    descr={item.description}
-                    price={item.price} />
+            return <div className="ListContainer">
+                    <Item key={i} item={item} />
             </div>
         })
     }
