@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemCount } from "../ItemCount/ItemCount.js";
+import { ItemCount } from "../../ItemCount/ItemCount.js";
 import "./ItemDetail.css";
 
 export const ItemDetail = ({ product }) => {

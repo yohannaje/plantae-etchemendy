@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ItemDetail } from "../ItemDetail/ItemDetail.js";
+import { ItemDetail } from "./ItemDetail/ItemDetail.js";
 import "./ItemDetailContainer.css";
 
 export const ItemDetailContainer = () => {
