@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
             categ: "Cactus",
             descr:
               "Se trata de plantas muy resistentes con capacidad para almacenar agua gracias a sus hojas carnosas.",
-            price: "$250",
+            price: '$250',
           }),
         2000
       );
