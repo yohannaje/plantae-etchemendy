@@ -8,7 +8,7 @@ export const ItemListContainer = ({greeting}) => {
     const getItems = () =>{
         return new Promise ((resolve, reject) =>{
 
-            setTimeout(()=> resolve(
+            resolve(
             [{id:1, 
             img: 'https://images.unsplash.com/photo-1594908629102-237d9c0f9594?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhY3R1c3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60',
             name: 'Senecio peregrinus', 
@@ -41,7 +41,7 @@ export const ItemListContainer = ({greeting}) => {
             price:'$250'}
             ]
 
-            ),2000)
+            )
         })
     }
 

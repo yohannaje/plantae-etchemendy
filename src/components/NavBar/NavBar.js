@@ -5,13 +5,14 @@ import {UserWidget} from './UserWidget/UserWidget.js';
 import {WishWidget} from './WishWidget/WishWidget.js';
 import navlogo from './logo.svg';
 import navMenu from './menu.svg';
+import {Link} from 'react-router-dom';
 
 export const NavBar = () => {
 
     return <div className="navBar">
         <nav>
             <img src={navMenu} className="navMenu" alt="menu" />
-            <img src={navlogo} className="navLogo" alt="logo" />
+            <Link to="/"><img src={navlogo} className="navLogo" alt="logo" /></Link>
             <div className="navLinks">
                 <ul>
                     <li>Plantas</li> 
