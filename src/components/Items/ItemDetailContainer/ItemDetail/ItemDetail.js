@@ -5,6 +5,12 @@ import { TagWidget } from "../../../NavBar/TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
 
 export const ItemDetail = ({ product }) => {
+  //este componente tambien es dummy por lo que recibe
+  //solamente el producto ya filtrado por el id
+  //lo unico que le agregue aca fue un link a la categoria
+  //por si se quiere navegar desde el detalle a otros productos similares.
+
+  //tambien renderizo el contador, con los valores iniciales y de stock harcodeados.
   return (
     <article className="productDetail">
       <img className="prodimg" src={product.img} alt={product.alt} />

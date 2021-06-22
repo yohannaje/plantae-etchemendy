@@ -7,7 +7,7 @@ export const Routes = () => {
 
 return <Switch>
         <Route exact path="/">
-            <ItemListContainer greeting="" />
+            <ItemListContainer />
         </Route>
         <Route path="/category/:id">
             <ItemListContainer />

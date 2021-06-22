@@ -5,9 +5,12 @@ import { useParams } from "react-router-dom";
 import { Loader } from "../../Loader.js";
 
 export const ItemDetailContainer = () => {
-  
+  //utilizao useState para registrar y mostrar los cambios en pantalla.
   const [prodById, setProdById] = useState({});
+  //obtengo un valor id por useParams para poder capturar la ruta a mostrar
   const { id } = useParams();
+  //Creo una funcion para obtener mis datos, los cuales se resuelven en una
+  //promise con timeOut para emular el backend.
   const getAllProducts = () => {
     return new Promise((resolve, reject) => {
       setTimeout(
@@ -82,12 +85,25 @@ export const ItemDetailContainer = () => {
     });
   };
 
+  //utilizo UseEffect para simplificar lo que tengo que hacer
+  //primero llamo a la promise y utilizo .then para el caso de exito
+  //luego al resultado de la promise (mi array de objetos), lo paso
+  //como parametro a mi funcion de estado setProdById pero ya filtrados por
+  //el valor de Id que tome de useParams, de esta manera ya mando directamente
+  //el item que necesito mostrar, y es el unico que se guarda en mi constante
+  //de estado.
+
   useEffect(() => {
     getAllProducts().then((data) => {
       setProdById(data.find(prod => prod.id === id));
     });
   }, []);
 
+  //Para poder mostrar el loader y evaluar si mi objeto estaba inicializado (vacio)
+  //al principio de la carga de la pagina, utilice la funcion Object.keys
+  //si el valor es 0, o sea que no tiene nada, muestro el loader.
+  //de lo contrario paso el producto a ItemDetail para que lo renderize.
+  
   return  <section className="detailContainer">
 	{ Object.keys(prodById).length === 0 ? (
     <div className="LoaderContainer">

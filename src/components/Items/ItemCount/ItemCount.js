@@ -22,6 +22,8 @@ export const ItemCount = ({ stock, initial, handleIncrement }) => {
     }
   }; //decrementa de a uno en el contador excepto cuando el valor es 1.
 
+
+  //en el return utilice los componentes de Material para renderizar el contador
   return (
     <div className={classes.counterGroup}>
       <Button onClick={(e) => handleDecrement()} className={classes.button}>
