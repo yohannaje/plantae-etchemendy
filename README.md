@@ -10,4 +10,4 @@ Por ultimo se puede elegir un producto y ver su expansion con la info correspond
 
 ### Demo
 
-<img src="./web.gif">
+<img src="https://github.com/yohannaje/plantae-etchemendy/blob/main/Web.gif">
