@@ -80,6 +80,10 @@
     padding-right: 3em;
   }
 
+  .pricediv img {
+    padding: 0 !important;
+  }
+
   .prodinfo {
     width: inherit !important;
     margin-left: 0;

@@ -105,8 +105,10 @@ export const ItemListContainer = () => {
   useEffect(() => {
     getItems().then((data) => {
       setItems(data);
+      
     });
   }, [id]);
+  
 
   return (
     <>
