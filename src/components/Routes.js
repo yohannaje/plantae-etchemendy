@@ -5,7 +5,6 @@ import {ItemDetailContainer} from '../components/Items/ItemDetailContainer/ItemD
 
 export const Routes = () => {
 
-
 return <Switch>
         <Route exact path="/">
             <ItemListContainer greeting="" />

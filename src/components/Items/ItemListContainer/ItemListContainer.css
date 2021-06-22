@@ -16,3 +16,12 @@
   color: #21475a;
   font-size: 16px;
 }
+
+.LoaderContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.LoaderContainer img {
+  width: 100px;
+}
