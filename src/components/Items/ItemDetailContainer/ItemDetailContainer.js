@@ -86,7 +86,7 @@ export const ItemDetailContainer = () => {
   };
 
   //utilizo UseEffect para simplificar lo que tengo que hacer
-  //primero llamo a la promise y utilizo .then para el caso de exito
+  //primero llamo a la funcion que tiene la promise y utilizo .then para el caso de exito
   //luego al resultado de la promise (mi array de objetos), lo paso
   //como parametro a mi funcion de estado setProdById pero ya filtrados por
   //el valor de Id que tome de useParams, de esta manera ya mando directamente

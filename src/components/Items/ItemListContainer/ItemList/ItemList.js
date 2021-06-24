@@ -4,7 +4,7 @@ import './Itemlist.css';
 
 export const ItemList=({items}) => {
     //Recibo por props los items filtrados o no a mostrar.
-   //Hago un map que me va a permitir recorrer el array item por item
+    //Hago un map que me va a permitir recorrer el array item por item
    //y pasarselo al componente funcional Item para que los muestre
     return <div>
     {    

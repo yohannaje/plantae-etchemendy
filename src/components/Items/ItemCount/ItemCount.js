@@ -4,13 +4,13 @@ import { itemCountStyle } from "./itemCountStyle";
 
 const useStyles = makeStyles((theme) => itemCountStyle(theme));
 
-export const ItemCount = ({ stock, initial, handleIncrement }) => {
+export const ItemCount = ({ currentstock, initial, handleIncrement }) => {
   const classes = useStyles();
   const [count, setCount] = useState(initial);
   //contador inicializado en valor inicial
 
   handleIncrement = () => {
-    if (stock > 0 && count < stock) {
+    if (currentstock > 0 && count < currentstock) {
       //si hay stock y el valor elegido por el usuario es menor que el stock
       setCount(count + 1); //sumar uno al contador (el maximo sera igual al stock disponible)
     }

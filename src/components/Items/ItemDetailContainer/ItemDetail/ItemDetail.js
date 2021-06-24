@@ -1,8 +1,8 @@
-import { React } from "react";
-import { ItemCount } from "../../ItemCount/ItemCount.js";
+import { React,useEffect,useState } from "react";
 import "./ItemDetail.css";
 import { TagWidget } from "../../../NavBar/TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
+import {StockContainer} from "./StockContainer.js";
 
 export const ItemDetail = ({ product }) => {
   //este componente tambien es dummy por lo que recibe
@@ -22,7 +22,7 @@ export const ItemDetail = ({ product }) => {
         <TagWidget />
         <h5>{product.price}</h5>
         </div>
-        <ItemCount stock={5} initial={1} />
+        <StockContainer />  
       </div>
     </article>
   );
