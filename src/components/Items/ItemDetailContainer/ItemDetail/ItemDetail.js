@@ -10,7 +10,9 @@ export const ItemDetail = ({ product }) => {
   //lo unico que le agregue aca fue un link a la categoria
   //por si se quiere navegar desde el detalle a otros productos similares.
 
-  //tambien renderizo el contador, con los valores iniciales y de stock harcodeados.
+  //tambien llamo al componente StockContainer que se encargará de 
+  //renderizar el contador con la logica para mostrar o no los botones 
+  //de finalizar y agregar al carrito
   return (
     <article className="productDetail">
       <img className="prodimg" src={product.img} alt={product.alt} />

@@ -2,9 +2,13 @@ import {React, useState} from 'react';
 import { ItemCount } from "../../ItemCount/ItemCount.js";
 import { Link } from "react-router-dom";
 
-
-
 export const StockContainer = () =>{
+  //este componente basicamente muestra el contador de productos 
+  //cuando la variable de estado esta en falso, esto quiere decir que no 
+  //estoy yendo a Finalizar la compra, cuando clickeo en agregar al carrito
+  // cambio la variable a true, lo que significa que tengo que mostrar
+  //el otro boton y dejar de mostrar el contador
+
   const [buttonState, setButtonState]= useState(false)
   
   return ( buttonState === false ? (
