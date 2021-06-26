@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { makeStyles, Button } from "@material-ui/core";
 import { itemCountStyle } from "./itemCountStyle";
+import { Children } from "react";
 
 const useStyles = makeStyles((theme) => itemCountStyle(theme));
 
-export const ItemCount = ({ currentstock, initial, handleIncrement }) => {
+export const ItemCount = ({ currentstock, initial, onAdd, handleIncrement }) => {
   const classes = useStyles();
   const [count, setCount] = useState(initial);
   //contador inicializado en valor inicial
@@ -37,6 +38,7 @@ export const ItemCount = ({ currentstock, initial, handleIncrement }) => {
         {" "}
         +{" "}
       </Button>
+      <button className="addCartButton" onClick={(e) => onAdd(count)}>Agregar al carrito</button>
     </div>
   );
 };

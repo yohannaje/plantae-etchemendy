@@ -1,6 +1,7 @@
 export const itemCountStyle = (theme) => {
   return {
     counterGroup: {
+      marginTop:"2em",
       display: "flex",
       justifyContent: "left",
       "& :hover": {
