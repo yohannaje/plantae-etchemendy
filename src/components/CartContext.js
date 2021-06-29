@@ -13,7 +13,7 @@ function addItem(product, cantItems){
     if (isInCart(product.id)){
 
         console.log(`esta es la cantidad a agregar ${cantItems}`)
-        updateItem(cantItems)
+        updateItem(product.id,cantItems)
     }else
 //si me retorna undefined es que en realidad no esta y por ende
 //lo tengo que agregar. Creo el objeto con el item y la cantidad 
@@ -48,10 +48,12 @@ const clear=()=>{
 //el valor que necesito actualizar
 //con un foreach encuentro el indice y lo actualizo con la nueva cantidad.
 
-const updateItem = (cantItems) => {
-const updatedCart = cartItems.forEach((cartItem, index) =>{
-    cartItems[index].quantity = cartItems[index].quantity + cantItems
-    console.log(cartItem)
+const updateItem = (id,cantItems) => {
+cartItems.forEach((cartItem, index) =>{
+    if (cartItem.item.id === id){
+        cartItem.quantity = cartItem.quantity + cantItems
+        console.log(cartItem)
+    }
 })
     console.log(cartItems)
 }
@@ -62,7 +64,7 @@ const isInCart=(id)=>{
     const foundItem = cartItems.find(product=> product.item.id === id)
     console.log(foundItem)
     return foundItem 
-}
+    }
 
 return <CartContext.Provider value={{addItem, removeItem, clear, cartItems}}>
     {children}
