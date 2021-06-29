@@ -28,7 +28,7 @@ export const NavBar = ({ id }) => {
         </div>
         <div className="navBarIcons">
           <UserWidget />
-          <CartWidget badgeNumber={3} />
+          <CartWidget />
           <WishWidget />
         </div>
       </nav>

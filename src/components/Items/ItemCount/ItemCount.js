@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles, Button } from "@material-ui/core";
 import { itemCountStyle } from "./itemCountStyle";
-import { Children } from "react";
 
 const useStyles = makeStyles((theme) => itemCountStyle(theme));
 

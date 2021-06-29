@@ -6,6 +6,7 @@ import {Cart} from '../screens/Cart.js'
 export const Routes = () => {
 
 return <Switch>
+       
         <Route exact path="/">
             <ItemListContainer />
         </Route>
@@ -18,6 +19,7 @@ return <Switch>
         <Route path="/cart">
             <Cart />
         </Route>
+      
 </Switch>
 
 }

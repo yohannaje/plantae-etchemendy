@@ -1,9 +1,9 @@
-import { React,useState } from "react";
+import { React,useContext,useState } from "react";
 import "./ItemDetail.css";
 import { TagWidget } from "../../../NavBar/TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
-import {ItemCount} from "../../ItemCount/ItemCount.js"
-
+import {ItemCount} from "../../ItemCount/ItemCount.js";
+import {CartContext} from "../../../CartContext.js"
 export const ItemDetail = ({ product }) => {
   //este componente tambien es dummy por lo que recibe
   //solamente el producto ya filtrado por el id
@@ -16,10 +16,10 @@ export const ItemDetail = ({ product }) => {
   // cambio la variable a true, lo que significa que tengo que mostrar
   //el otro boton y dejar de mostrar el contador
   const [endPurchase, showEndPurchase]=useState(false);
+  const { addItem } = useContext(CartContext);
   const onAdd = (cantItems) => {
   showEndPurchase(true);
-  //actualizo cart
-
+  addItem(product, cantItems)
   }
   return (
     <article className="productDetail">
