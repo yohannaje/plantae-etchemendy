@@ -32,8 +32,8 @@ export const ItemDetail = ({ product }) => {
         <p>{product.description}</p>
         <div className="pricediv">
           <TagWidget />
-          <h5>{product.price}</h5>
-        </div>
+          <h5>${product.price}</h5>
+        </div> 
         {endPurchase?(
           <div className="stockContainer">
           <Link to="/cart">
@@ -41,7 +41,7 @@ export const ItemDetail = ({ product }) => {
           </Link>
           <br></br>
           <button className="backButton" onClick={(e) => showEndPurchase(false)}>
-            Cancelar
+            Atras
           </button>
         </div>
         ):(<ItemCount currentstock={product.stock} initial={product.min} onAdd={onAdd}/> 

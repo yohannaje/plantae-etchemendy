@@ -53,20 +53,20 @@ cartItems.forEach((cartItem, index) =>{
     if (cartItem.item.id === id){
         cartItem.quantity = cartItem.quantity + cantItems
         console.log(cartItem)
-    }
-})
-    console.log(cartItems)
+    }  
+}) 
+console.log(cartItems)
+
 }
 // A isInCart le paso el ID del producto que voy a agregar
 //busco el ID del item en el cart, si me retorna algo truthy que no es undefined es porque existe
 
 const isInCart=(id)=>{
     const foundItem = cartItems.find(product=> product.item.id === id)
-    console.log(foundItem)
     return foundItem 
     }
 
-return <CartContext.Provider value={{addItem, removeItem, clear, cartItems}}>
+return <CartContext.Provider value={{addItem, updateItem, removeItem, clear, cartItems}}>
     {children}
 </CartContext.Provider>
 }

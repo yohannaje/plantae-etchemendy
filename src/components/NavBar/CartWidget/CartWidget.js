@@ -1,24 +1,24 @@
-import React, {useContext,useState, useEffect} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import './CartWidget.css';
 import {Badge} from '@material-ui/core';
 import cartIcon from './cartIcon.svg';
 import { CartContext } from '../../CartContext';
+import { Link } from 'react-router-dom';
 
 export const CartWidget = () => {
-    const {cartItems} = useContext(CartContext);
-    const [badgeNumber, setBadgenumber]=useState(0)
-    
-    useEffect(()=>{
-        cartItems.map((item, i)=>{
-            setBadgenumber(+item.quantity)
-        })
-        
-    },[cartItems])
+const{cartItems}=useContext(CartContext);
+const [badgeNumber, setBadgeNumber]=useState(0);
 
-    return <div className="cartWidget">
+useEffect(()=>{
+setBadgeNumber(cartItems.reduce((a,c)=> a + c.quantity, 0))
+},)
+
+
+return <div className="cartWidget">
          
-        <Badge badgeContent={badgeNumber} color="primary" overlap="circle">
+       <Link to="/cart"> <Badge badgeContent={badgeNumber} color="primary" overlap="circle">
         <img src={cartIcon} alt="Carrito"></img>
         </Badge>
+        </Link>
     </div>
 }

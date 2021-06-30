@@ -3,6 +3,7 @@ import "./ItemListContainer.css";
 import { ItemList } from "./ItemList/ItemList.js";
 import { useParams } from "react-router-dom";
 import { Loader } from "../../Loader.js";
+import { dataBase } from "../../../Firebase/firebase.js"
 
 export const ItemListContainer = () => {
   //Obtengo el valor de la categoria en la que estoy con useParams()
@@ -28,7 +29,7 @@ export const ItemListContainer = () => {
               category: "cactus",
               description:
                 "Se trata de plantas muy resistentes con capacidad para almacenar agua en sus hojas.",
-              price: "$250",
+              price: 250,
             },
             {
               id: "2",
@@ -38,7 +39,7 @@ export const ItemListContainer = () => {
               category: "interior",
               description:
                 "Se trata de un cactus carente de espinas que en su hábitat natural prospera sobre árboles.",
-              price: "$250",
+              price: 200,
             },
             {
               id: "3",
@@ -48,7 +49,7 @@ export const ItemListContainer = () => {
               category: "exterior",
               description:
                 "Puede alcanzar los 6 m de altura, sin embargo, la mayoría no superan 1 m.",
-              price: "$250",
+              price: 320,
             },
             {
               id: "4",
@@ -58,7 +59,7 @@ export const ItemListContainer = () => {
               category: "interior",
               description:
                 "Puede alcanzar los 6 m de altura, sin embargo, la mayoría no superan 1 m.",
-              price: "$250",
+              price: 180,
             },
             {
               id: "5",
@@ -68,7 +69,7 @@ export const ItemListContainer = () => {
               category: "cactus",
               description:
                 "Se trata de plantas muy resistentes con capacidad para almacenar agua en sus hojas.",
-              price: "$250",
+              price: 350,
             },
             {
               id: "6",
@@ -78,7 +79,7 @@ export const ItemListContainer = () => {
               category: "exterior",
               description:
                 "Se trata de un cactus carente de espinas que en su hábitat natural prospera sobre árboles.",
-              price: "$250",
+              price: 250,
             },
             {
               id: "7",
@@ -88,7 +89,7 @@ export const ItemListContainer = () => {
               category: "interior",
               description:
                 "Puede alcanzar los 6 m de altura, sin embargo, la mayoría no superan 1 m.",
-              price: "$250",
+              price: 260,
             },
             {
               id: "8",
@@ -98,7 +99,7 @@ export const ItemListContainer = () => {
               category: "cactus",
               description:
                 "Puede alcanzar los 6 m de altura, sin embargo, la mayoría no superan 1 m.",
-              price: "$250",
+              price: 375,
             },
           ]),
         2000
