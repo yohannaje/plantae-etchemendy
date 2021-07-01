@@ -1,111 +1,103 @@
-.ListContainer{
-    display:inline-grid;
-    margin-top: 3em;
+.ListContainer {
+  display: inline-grid;
+  margin-top: 3em;
 }
 
-.ListContainer img{
-    height:12em;
-    width:inherit;
+.ListContainer img {
+  height: 12em;
+  width: inherit;
 }
 
-.card{
-   
-    width:15em;
-    margin:0.5em;
-    font-family: 'Montserrat', sans-serif;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    transition: 0.3s;
+.card {
+  width: 15em;
+  margin: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  background: #ffffff;
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.card h4{
-    color: #6EBDAA;
-    text-align: left;
-    font-size: 0.8em;
-    font-weight: bolder;
-    text-transform: uppercase;
-    margin-left:1em !important;
-    letter-spacing: 0.1em;
-
-
+.card h4 {
+  color: #6ebdaa;
+  text-align: left;
+  font-size: 0.8em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-left: 1em !important;
+  letter-spacing: 0.1em;
 }
 
-.pricediv{
-    display: flex;
-    align-items: center;
-    height: 2em;
-    margin-top: 1.2em;
+.pricediv {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  margin-top: 1.2em;
 }
 
-.pricediv img{
-    width:32px !important;
-    height: auto;
-    margin-left:1em;
-
-
+.pricediv img {
+  width: 32px !important;
+  height: auto;
+  margin-left: 1em;
 }
 
-.card h3{
-    text-align: left;
-    margin:0.6em !important;
-    font-weight: 800;
-    font-size: 1.2em;
-    color:#21475A;
+.card h3 {
+  text-align: left;
+  margin: 0.6em !important;
+  font-weight: 800;
+  font-size: 1.2em;
+  color: #21475a;
 }
 
-.card img{
-    border-radius: 10px 10px 0 0;
+.card img {
+  border-radius: 10px 10px 0 0;
 }
 
 .descr {
-    color:#8C8C8C !important;
-    font-size: 0.8em !important;
-    margin:1em !important;
-    text-align: left;
+  color: #8c8c8c !important;
+  font-size: 0.8em !important;
+  margin: 1em !important;
+  text-align: left;
 }
 
-.card .wishWidget img{
-    height: auto;
-    width:32px !important;
-    justify-content: right;
-    margin-left: 2em;
+.card .wishWidget img {
+  height: auto;
+  width: 32px !important;
+  justify-content: right;
+  margin-left: 2em;
 }
 
-.price{
-    text-align:left;
-    margin:1em !important;
-    font-weight: 600;
-    font-size: 1.3em !important;
+.price {
+  text-align: left;
+  margin: 1em !important;
+  font-weight: 600;
+  font-size: 1.3em !important;
 }
 
-
-.cardbuttons{
-    display: flex;
-    margin:1em !important;
-    align-items: center;
+.cardbuttons {
+  display: flex;
+  margin: 1em !important;
+  align-items: center;
 }
 
-.buyItem{
-    background-color:#fcbdab;
-    border: none !important;
-	border-radius:28px;
-	cursor:pointer;
-	color:#ffffff;
-	font-size: 0.8em;
-    letter-spacing: 0.1em;
-	padding:16px 32px;
-	text-decoration:none;
-    text-transform: uppercase;
-    font-weight: 700;
-   
+.buyItem {
+  background-color: #21475a;
+  border: none !important;
+  border-radius: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  padding: 16px 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-button{
-    transition: all .2s ease-in-out;
+button {
+  transition: all 0.2s ease-in-out;
 }
 
-button:hover{
-    transform: scale(1.07);
-    
+button:hover {
+  transform: scale(1.07);
 }

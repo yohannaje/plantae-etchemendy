@@ -4,7 +4,6 @@ import {BrowserRouter} from 'react-router-dom';
 import {Routes} from './components/Routes.js';
 import {CartProvider} from './components/CartContext.js';
 
-
 function App() {
   return (
     <div className="App">

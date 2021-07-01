@@ -1,3 +1,137 @@
-.cartContainer {
-  display: grid;
+.cartContent {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartTitle {
+  color: #21475a;
+  padding: 20px 30px;
+  font-size: 2em;
+  font-weight: 600;
+}
+.cartImageText {
+  min-width: 5em;
+}
+.itemTitle {
+  width: 23em;
+}
+.cartTotal {
+  color: #21475a;
+  padding: 20px 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.cartTotal p {
+  margin-left: 2em;
+}
+.cartTotal button {
+  background-color: #6ebdaa;
+  border: none !important;
+  border-radius: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 4em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-left: 24em;
+}
+
+.subtotal {
+  display: flex;
+}
+.subtotal p {
+  margin-left: 2em;
+  color: #21475a;
+  font-weight: 600;
+}
+
+.emptyCart h1 {
+  margin-top: 1em;
+  font-weight: 800;
+  font-size: 2em;
+  color: #21475a;
+}
+
+.itemRow {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.itemRow img {
+  width: 75px;
+}
+.deleteCartItem button {
+  border: none;
+  background-color: #fff;
+}
+.deleteCartItem button img {
+  width: 40px;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.itemRow h4 {
+  color: #21475a;
+  font-size: 1em;
+  margin-left: 1em;
+  margin-right: 3em;
+}
+
+.buttonCounter {
+  background-color: white;
+  border: none;
+  margin-right: 1em;
+  margin-left: 1em;
+  color: #6ebdaa !important;
+  font-size: 1.1em;
+}
+.counterGroup {
+  margin-left: 2em;
+  margin-right: 3em;
+}
+
+.counterGroup button {
+  border-radius: 50% 50% 50% 50% !important;
+  background-color: #6ebdaa !important ;
+  color: #ffffff;
+  border: none;
+  height: 3em;
+  width: 3em;
+  min-width: 32px;
+}
+.emptyCart img {
+  width: 300px;
+  margin-right: 4em;
+}
+.emptyCart button {
+  background-color: #ffff;
+  border: #6ebdaa 1px solid;
+  border-radius: 28px;
+  cursor: pointer;
+  color: #6ebdaa;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 4em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 3em;
+  margin-left: 5em;
 }
