@@ -8,6 +8,11 @@
   flex-direction: column;
 }
 
+.emptyCart {
+  margin-left: 25em;
+  margin-top: 4em;
+}
+
 .cartTitle {
   color: #21475a;
   padding: 20px 30px;
