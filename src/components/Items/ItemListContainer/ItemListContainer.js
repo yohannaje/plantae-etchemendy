@@ -15,15 +15,31 @@ export const ItemListContainer = () => {
  
   useEffect(() => {
     const itemCollection = dataBase.collection("items");
+
     itemCollection.get().then((response)=>{
       if(response.size===0){
         console.log("no results");
-      }
-      const ItemsDB = response.docs.map(element=>{
-        return {...element.data(), id:element.id};
-      });
-      setItems(ItemsDB);
-    })
+      } else{
+
+        if (id===undefined){
+          //
+          const itemsDB = response.docs.map(element=>{
+            return {...element.data(), id:element.id};
+          });
+          setItems(itemsDB);
+        }
+        else{
+           //
+          const filteredCollection = itemCollection.where('category','==',id);
+          filteredCollection.get().then((response)=>{
+          const filteredItems = response.docs.map(element=>{
+            return {...element.data(), id:element.id};
+          });
+          setItems(filteredItems)
+        });
+        }
+        }})
+        //
   }, [id]); 
   
   //aca utilizo ID para que se dispare useEffect cada vez que
@@ -49,11 +65,7 @@ export const ItemListContainer = () => {
           </p>
         </section>
         {items.length > 0 ? (
-          id === undefined ? (
-            <ItemList items={items} />
-          ) : (
-            <ItemList items={items.filter((item) => item.category === id)} />
-          )
+          <ItemList items={items}/>
         ) : (
           <div className="LoaderContainer">
             <Loader />

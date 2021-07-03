@@ -12,7 +12,7 @@ export const Item = ({ item }) => {
     <div className="card">
       <img src={item.img} alt={item.alt}></img>
 
-      <h4>{item.categ}</h4>
+      <h4>{item.category}</h4>
       <h3 className="plantTitle">{item.name}</h3>
       <p className="descr">{item.description}</p>
       <div className="pricediv">
