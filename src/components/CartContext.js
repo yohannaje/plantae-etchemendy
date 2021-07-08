@@ -55,6 +55,8 @@ const updatedCartItems = cartItems.map((item) =>{
             ...item,
             quantity: item.quantity + cantItems
         }
+    } else{
+        return null;
     }
     
 });

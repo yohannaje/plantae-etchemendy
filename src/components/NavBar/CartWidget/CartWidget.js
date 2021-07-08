@@ -9,9 +9,10 @@ export const CartWidget = () => {
 const{cartItems}=useContext(CartContext);
 const [badgeNumber, setBadgeNumber]=useState(0);
 
-useEffect(()=>{
-setBadgeNumber(cartItems.reduce((a,c)=> a + c.quantity, 0))
-},)
+useEffect(()=>{ // eslint-disable-line react-hooks/exhaustive-deps
+
+setBadgeNumber(cartItems.reduce((a,c)=> a + c.quantity, 0)) 
+},) 
 
 
 return <div className="cartWidget">

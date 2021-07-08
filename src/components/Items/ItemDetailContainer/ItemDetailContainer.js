@@ -4,7 +4,6 @@ import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
 import { Loader } from "../../Loader.js";
 import {dataBase} from "../../../Firebase/firebase.js"
-import { SettingsRemoteSharp } from "@material-ui/icons";
 
 export const ItemDetailContainer = () => {
   //utilizao useState para registrar y mostrar los cambios en pantalla.
@@ -16,19 +15,19 @@ export const ItemDetailContainer = () => {
   
 
 
-  useEffect(() => {
+  useEffect(() => { 
     const itemCollection = dataBase.collection("items");
     const item = itemCollection.doc(id);
 
     item.get().then((doc)=>{
       if(!doc.exists){
         console.log('item doesnt exist');
-      }
+      } 
       setProdById({id: doc.id, ...doc.data()})
     })
     
    
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   //Para poder mostrar el loader y evaluar si mi objeto estaba inicializado (vacio)
   //al principio de la carga de la pagina, utilice la funcion Object.keys

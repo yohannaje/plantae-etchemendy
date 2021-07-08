@@ -27,15 +27,12 @@
 }
 .cartTotal {
   color: #21475a;
-  padding: 20px 30px;
   font-weight: 600;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding-left: 5em;
 }
 
-.cartTotal p {
-  margin-left: 2em;
-}
 .cartTotal button {
   background-color: #6ebdaa;
   border: none !important;
@@ -50,7 +47,9 @@
   height: 4em;
   padding-left: 2em;
   padding-right: 2em;
-  margin-left: 24em;
+  align-items: flex-end;
+  margin-top: auto;
+  margin-bottom: 2.5em;
 }
 
 .subtotal {
@@ -139,4 +138,30 @@
   padding-right: 2em;
   margin-top: 3em;
   margin-left: 5em;
+}
+
+.purchase {
+  display: flex;
+  color: #21475a;
+  padding: 20px 30px;
+  font-weight: 600;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo label {
+  font-size: 1em;
+}
+
+.userInfo input {
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+  border: none;
+  background-color: rgb(248, 247, 247);
+  padding: 1em;
+  font-size: 1em;
+  width: 20em;
+  border-radius: 5px;
 }
