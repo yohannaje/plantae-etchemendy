@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { ItemDetail } from "./ItemDetail/ItemDetail.js";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
-import { Loader } from "../../Loader.js";
-import {dataBase} from "../../../Firebase/firebase.js"
+import { Loader } from "../../components/Loader/Loader.js";
+import {dataBase} from "../../services/Firebase/firebase.js";
+import { EmptyPageComponent } from "../../components/EmptyPageComponent/EmptyPageComponent.js";
+import { Footer } from "../../components/Footer/Footer.js";
 
 export const ItemDetailContainer = () => {
   //utilizao useState para registrar y mostrar los cambios en pantalla.
+  const[docExists,setDocExists]=useState(true);
   const [prodById, setProdById] = useState({});
   //obtengo un valor id por useParams para poder capturar la ruta a mostrar
   const { id } = useParams();
@@ -21,7 +24,7 @@ export const ItemDetailContainer = () => {
 
     item.get().then((doc)=>{
       if(!doc.exists){
-        console.log('item doesnt exist');
+        setDocExists(false);
       } 
       setProdById({id: doc.id, ...doc.data()})
     })
@@ -29,20 +32,31 @@ export const ItemDetailContainer = () => {
    
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  //Para poder mostrar el loader y evaluar si mi objeto estaba inicializado (vacio)
-  //al principio de la carga de la pagina, utilice la funcion Object.keys
-  //si el valor es 0, o sea que no tiene nada, muestro el loader.
-  //de lo contrario paso el producto a ItemDetail para que lo renderize.
   
-  return  <section className="detailContainer">
+  return  <>
+  <section className="detailContainer">
 	{ Object.keys(prodById).length === 0 ? (
     <div className="LoaderContainer">
       <Loader/>
     </div>
-    ):(<ItemDetail product={prodById} />)
+    ):( docExists ? (
+    <ItemDetail product={prodById} />): (
+     
+      <EmptyPageComponent
+      className="emptyCart"
+      imgUrl="https://i.ibb.co/m9GFpqH/Artboard-1-2x.png"
+      altText="item no encontrado"
+      h1="Oops, ese producto no existe"
+      link="/"
+      btnText="Volver al Home"/>
+    
+    ))
 	
   }
+  
  </section>
 
+ <Footer />
+</>
 };
 

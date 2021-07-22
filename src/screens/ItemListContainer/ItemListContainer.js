@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
-import { ItemList } from "./ItemList/ItemList.js";
+import {ItemList} from "../ItemListContainer/ItemList/ItemList.js"
 import { useParams } from "react-router-dom";
-import { Loader } from "../../Loader.js";
-import { dataBase } from "../../../Firebase/firebase.js"
+import { Loader } from "../../components/Loader/Loader.js";
+import { dataBase } from "../../services/Firebase/firebase.js"
+import { Footer } from "../../components/Footer/Footer.js";
 
 export const ItemListContainer = () => {
   //Obtengo el valor de la categoria en la que estoy con useParams()
@@ -72,6 +73,7 @@ export const ItemListContainer = () => {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 };

@@ -7,12 +7,12 @@ const useStyles = makeStyles((theme) => itemCountStyle(theme));
 export const ItemCount = ({ currentstock, initial, onAdd, handleIncrement }) => {
   const classes = useStyles();
   const [count, setCount] = useState(initial);
-  //contador inicializado en valor inicial
+ 
 
   handleIncrement = () => {
     if (currentstock > 0 && count < currentstock) {
-      //si hay stock y el valor elegido por el usuario es menor que el stock
-      setCount(count + 1); //sumar uno al contador (el maximo sera igual al stock disponible)
+     
+      setCount(count + 1);
     }
   };
 
@@ -20,10 +20,7 @@ export const ItemCount = ({ currentstock, initial, onAdd, handleIncrement }) => 
     if (count > 1) {
       setCount(count - 1);
     }
-  }; //decrementa de a uno en el contador excepto cuando el valor es 1.
-
-
-  //en el return utilice los componentes de Material para renderizar el contador
+  }; 
   return (
     <div className={classes.counterGroup}>
       <Button onClick={(e) => handleDecrement()} className={classes.button}>

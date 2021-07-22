@@ -11,8 +11,6 @@ function addItem(product, cantItems){
 //actualizarle la cantidad de items.
 
     if (isInCart(product.id)){
-
-        console.log(`esta es la cantidad a agregar ${cantItems}`)
         updateItem(product.id,cantItems)
     }else
 //si me retorna undefined es que en realidad no esta y por ende
@@ -24,7 +22,6 @@ function addItem(product, cantItems){
         quantity:cantItems
     }
         setCartItems([...cartItems, itemToAdd]) 
-        console.log(cartItems)
     }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item } from '../../Item/Item.js';
+import { Item } from '../../../components/Items/Item/Item.js';
 import './Itemlist.css';
 
 export const ItemList=({items}) => {

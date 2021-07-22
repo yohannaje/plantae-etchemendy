@@ -1,0 +1,19 @@
+.footer {
+  background-color: #21475a;
+  display: flex;
+  color: white;
+  padding: 2em;
+  justify-content: space-between;
+  margin-top: 5em;
+  margin-bottom: 0;
+}
+
+.footer ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.footer p {
+  margin-right: 2em;
+}

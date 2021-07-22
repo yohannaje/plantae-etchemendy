@@ -2,7 +2,7 @@ import React, {useContext, useState, useEffect} from 'react';
 import './CartWidget.css';
 import {Badge} from '@material-ui/core';
 import cartIcon from './cartIcon.svg';
-import { CartContext } from '../../CartContext';
+import { CartContext } from '../../../screens/Cart/CartContext.js';
 import { Link } from 'react-router-dom';
 
 export const CartWidget = () => {

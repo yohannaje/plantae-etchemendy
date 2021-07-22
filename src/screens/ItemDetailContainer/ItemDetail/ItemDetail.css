@@ -15,6 +15,7 @@
 .productDetail img {
   height: 30em;
   margin-left: 10em;
+  max-width: 600px;
 }
 
 .productDetail h1 {
@@ -145,5 +146,20 @@
     margin-left: 0;
     padding-left: 3em;
     padding-right: 3em;
+  }
+}
+
+/*mobile  */
+@media screen and (max-width: 640px) {
+  .productDetail img {
+    margin-left: 0;
+    width: inherit;
+    max-width: 500px;
+    height: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .pricediv img {
+    padding: 0 !important;
   }
 }

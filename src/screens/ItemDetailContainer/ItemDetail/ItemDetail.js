@@ -1,20 +1,11 @@
 import { React,useContext,useState } from "react";
 import "./ItemDetail.css";
-import { TagWidget } from "../../../NavBar/TagWidget/TagWidget.js";
+import { TagWidget } from "../../../components/NavBar/TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
-import {ItemCount} from "../../ItemCount/ItemCount.js";
-import {CartContext} from "../../../CartContext.js"
-export const ItemDetail = ({ product }) => {
-  //este componente tambien es dummy por lo que recibe
-  //solamente el producto ya filtrado por el id
-  //lo unico que le agregue aca fue un link a la categoria
-  //por si se quiere navegar desde el detalle a otros productos similares.
+import {ItemCount} from "../../../components/Items/ItemCount/ItemCount.js";
+import {CartContext} from "../../Cart/CartContext.js";
 
-  //este componente basicamente muestra el contador de productos
-  //cuando la variable de estado esta en falso, esto quiere decir que no
-  //estoy yendo a Finalizar la compra, cuando clickeo en agregar al carrito
-  // cambio la variable a true, lo que significa que tengo que mostrar
-  //el otro boton y dejar de mostrar el contador
+export const ItemDetail = ({ product }) => {
   const [endPurchase, showEndPurchase]=useState(false);
   const { addItem } = useContext(CartContext);
   const onAdd = (cantItems) => {
@@ -25,7 +16,7 @@ export const ItemDetail = ({ product }) => {
     <article className="productDetail">
       <img className="prodimg" src={product.img} alt={product.alt} />
       <div className="prodinfo">
-        <Link to={`/category/${product.category}`}>
+        <Link to={`/categories/${product.category}`}>
           <h4>{product.category}</h4>
         </Link>
         <h1>{product.name}</h1>
@@ -44,10 +35,13 @@ export const ItemDetail = ({ product }) => {
             Atras
           </button>
         </div>
-        ):(<ItemCount currentstock={product.stock} initial={product.min} onAdd={onAdd}/> 
+        ):(<div>
+        <ItemCount currentstock={product.stock} initial={product.min} onAdd={onAdd}/> 
+          </div>
         )
         }
       </div>
+      
     </article>
   );
 };

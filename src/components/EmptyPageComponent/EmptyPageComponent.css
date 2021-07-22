@@ -1,0 +1,41 @@
+.emptyPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5em;
+  text-align: center;
+}
+.emptyPage h1 {
+  margin-top: 1em;
+  font-weight: 800;
+  font-size: 2em;
+  line-height: 0%;
+  color: #21475a;
+}
+
+.emptyPage img {
+  width: 300px;
+}
+
+.emptyPage button {
+  background-color: #ffff;
+  border: #6ebdaa 1px solid;
+  border-radius: 28px;
+  cursor: pointer;
+  color: #6ebdaa;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 4em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.emptyPage p {
+  color: #21475a;
+  font-weight: 600;
+  width: 40%;
+  margin-bottom: 2em;
+}

@@ -4,7 +4,7 @@ import { CartWidget } from "./CartWidget/CartWidget.js";
 import { UserWidget } from "./UserWidget/UserWidget.js";
 import { WishWidget } from "./WishWidget/WishWidget.js";
 import navlogo from "./logo.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const NavBar = ({ id }) => {
   return (
@@ -16,13 +16,13 @@ export const NavBar = ({ id }) => {
         <div className="navLinks">
           <ul>
             <li>
-              <Link to={"/category/cactus"}>Cactus</Link>
+              <NavLink activeStyle={{ color:'#6ebdaa' }}to={"/categories/cactus"}>Cactus</NavLink>
             </li>
             <li>
-              <Link to={"/category/interior"}>Interior</Link>
+              <NavLink activeStyle={{ color:'#6ebdaa' }}to={"/categories/interior"}>Interior</NavLink>
             </li>
             <li>
-              <Link to={"/category/exterior"}>Exterior</Link>
+              <NavLink activeStyle={{ color:'#6ebdaa' }}to={"/categories/exterior"}>Exterior</NavLink>
             </li>
           </ul>
         </div>
