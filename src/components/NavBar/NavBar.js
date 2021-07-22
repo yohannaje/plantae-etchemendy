@@ -7,8 +7,7 @@ import navlogo from "./logo.svg";
 import { Link, NavLink } from "react-router-dom";
 
 export const NavBar = ({ id }) => {
-  return (
-    <div className="navBar">
+  return <div className="navBar">
       <nav>
         <Link to="/">
           <img src={navlogo} className="navLogo" alt="logo" />
@@ -33,5 +32,4 @@ export const NavBar = ({ id }) => {
         </div>
       </nav>
     </div>
-  );
 };

@@ -25,3 +25,13 @@
 .LoaderContainer img {
   width: 100px;
 }
+
+.ListContainer {
+  display: inline-grid;
+  margin-top: 3em;
+}
+
+.ListContainer img {
+  height: 12em;
+  width: inherit;
+}

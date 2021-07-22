@@ -8,8 +8,7 @@ import { ThankYou } from "../screens/ThankYou.js";
 import { Footer } from "../components/Footer/Footer.js";
 
 export const Routes = () => {
-  return (
-    <Switch>
+  return <Switch>
       <Route exact path="/">
         <ItemListContainer />
       </Route>
@@ -34,8 +33,7 @@ export const Routes = () => {
           link="/"
           btnText="Volver al Home"
         />
-        <Footer/>
+        <Footer />
       </Route>
     </Switch>
-  );
 };

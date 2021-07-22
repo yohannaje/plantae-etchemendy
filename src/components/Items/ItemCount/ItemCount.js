@@ -21,8 +21,7 @@ export const ItemCount = ({ currentstock, initial, onAdd, handleIncrement }) => 
       setCount(count - 1);
     }
   }; 
-  return (
-    <div className={classes.counterGroup}>
+  return <div className={classes.counterGroup}>
       <Button onClick={(e) => handleDecrement()} className={classes.button}>
         {" "}
         -{" "}
@@ -36,5 +35,4 @@ export const ItemCount = ({ currentstock, initial, onAdd, handleIncrement }) => 
       </Button>
       <button className="addCartButton" onClick={(e) => onAdd(count)}>Agregar al carrito</button>
     </div>
-  );
 };
