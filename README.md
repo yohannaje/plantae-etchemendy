@@ -10,8 +10,8 @@ En el carrito se puede eliminar algun item si es necesario, y se puede generar l
 
 # Demo
 
-<img src="https://giphy.com/embed/fW8zzuyMB4suNE6BUP" alt="">
-<img src="https://giphy.com/gifs/4ay2UFTZZsTFEZtfCi" alt="">
+<img src="https://media2.giphy.com/media/fW8zzuyMB4suNE6BUP/giphy.gif" alt="gif de agregado de items al carrito">
+<img src="https://media2.giphy.com/media/4ay2UFTZZsTFEZtfCi/giphy.gif" alt="gif de formulario y compra exitosa">
 
 #### Deploy
 
