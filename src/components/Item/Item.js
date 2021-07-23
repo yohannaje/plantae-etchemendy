@@ -1,6 +1,6 @@
 import React from "react";
 import { WishWidget } from "../NavBar/WishWidget/WishWidget.js";
-import { TagWidget } from "../NavBar/TagWidget/TagWidget.js";
+import { TagWidget } from "../TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
 import "./Item.css";
 

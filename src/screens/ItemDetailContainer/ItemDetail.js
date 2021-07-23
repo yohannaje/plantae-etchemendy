@@ -1,5 +1,5 @@
 import { React, useContext, useState } from "react";
-import { TagWidget } from "../../components/NavBar/TagWidget/TagWidget.js";
+import { TagWidget } from "../../components/TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
 import { ItemCount } from "./ItemCount.js";
 import { CartContext } from "../Cart/CartContext.js";

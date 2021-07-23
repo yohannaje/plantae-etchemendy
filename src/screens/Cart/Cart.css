@@ -130,9 +130,10 @@
   background-color: #6ebdaa;
   color: white;
   border: none;
-  height: 3em;
-  width: 3em;
+  height: 2.5em;
+  width: 2.5em;
   min-width: 32px;
+  font-size: 1.1em;
 }
 .buttonCounter {
   color: #6ebdaa;
@@ -140,15 +141,18 @@
   border: none;
   padding-left: 1em;
   padding-right: 1em;
+  font-size: 1.1em;
 }
+.counterGroup {
+  margin-top: 2em;
+}
+
 /*mobile  */
 @media screen and (max-width: 640px) {
   .cartDetail {
     width: 70%;
   }
-  .counterGroup {
-    margin-top: 2em;
-  }
+
   .addCartButton {
     margin-left: 0;
     margin-top: 2em;
@@ -157,7 +161,4 @@
 
 /*tablet  */
 @media screen and (min-width: 640px) and (max-width: 1280px) {
-  .counterGroup {
-    margin-top: 2em;
-  }
 }
