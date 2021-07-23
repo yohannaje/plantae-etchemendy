@@ -8,15 +8,15 @@ En el proyecto se puede navegar entre las distintas categorías y ver el detalle
 
 En el carrito se puede eliminar algun item si es necesario, y se puede generar la orden de compra, obteniendo el valor de esta al final del proceso.
 
+## Deploy
+
+<a href="https://gifted-northcutt-98918e.netlify.app"> Live Site </a>
+
 ## Demo
 
 <img src="https://media2.giphy.com/media/fW8zzuyMB4suNE6BUP/giphy.gif" alt="gif de agregado de items al carrito">
 <br>
 <img src="https://media2.giphy.com/media/4ay2UFTZZsTFEZtfCi/giphy.gif" alt="gif de formulario y compra exitosa">
-
-## Deploy
-
-<a href="https://gifted-northcutt-98918e.netlify.app"> Live Site </a>
 
 ## Aspectos Técnicos
 
