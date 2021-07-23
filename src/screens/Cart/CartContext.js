@@ -46,6 +46,15 @@ export const CartProvider = ({ children }) => {
     return foundItem;
   };
 
+  const itemsQty = cartItems.reduce(
+    (total, products) => total + products.quantity,
+    0
+  );
+  const itemsPrice = cartItems.reduce(
+    (total, products) => total + products.item.price * products.quantity,
+    0
+  );
+
   const calculateCartTotal = () => {
 		const total = cartItems.reduce((summatory, items) => {
 			return summatory + items.quantity;
@@ -62,7 +71,7 @@ export const CartProvider = ({ children }) => {
 	}, [cartItems]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return <CartContext.Provider
-      value={{ addItem, updateItem, removeItem, clear, cartItems, cartTotal }}
+      value={{ addItem, updateItem, removeItem, clear, cartItems, cartTotal, itemsPrice, itemsQty }}
     >
       {children}
     </CartContext.Provider>
