@@ -1,10 +1,10 @@
 import React from "react";
-import "./NavBar.css";
+import { Link, NavLink } from "react-router-dom";
 import { CartWidget } from "./CartWidget/CartWidget.js";
 import { UserWidget } from "./UserWidget/UserWidget.js";
 import { WishWidget } from "./WishWidget/WishWidget.js";
 import navlogo from "./logo.svg";
-import { Link, NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 export const NavBar = ({ id }) => {
   return <div className="navBar">

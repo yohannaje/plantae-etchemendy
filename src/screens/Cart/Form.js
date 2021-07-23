@@ -31,10 +31,10 @@ export const Form = ({ cartItems, itemsPrice, clear }) => {
       const batch = dataBase.batch();
       const outOfStock = [];
 
-      querySnapshot.docs.forEach((docSnapshot, idx) => {
-        if (docSnapshot.data().stock >= cartItems[idx].quantity) {
+      querySnapshot.docs.forEach((docSnapshot, id) => {
+        if (docSnapshot.data().stock >= cartItems[id].quantity) {
           batch.update(docSnapshot.ref, {
-            stock: docSnapshot.data().stock - cartItems[idx].quantity,
+            stock: docSnapshot.data().stock - cartItems[id].quantity,
           });
         } else {
           outOfStock.push({ ...docSnapshot.data(), id: docSnapshot.id });
@@ -65,17 +65,17 @@ export const Form = ({ cartItems, itemsPrice, clear }) => {
             .orderBy("date", "desc")
             .limit(1)
             .get()
-            .then((querySnapshot) => {});
-          setOrderNumber(querySnapshot.docs[0].id);
-          setRedirect(true);
-          clear();
+            .then((querySnapshot) => {
+              setOrderNumber(querySnapshot.docs[0].id)
+              setRedirect(true);
+              clear();
+            });
         });
       }
     });
   };
 
-  return (
-    <>
+  return<>
       {redirect ? (
         <Redirect to={`/thankyou/${orderNumber}`} />
       ) : (
@@ -149,5 +149,4 @@ export const Form = ({ cartItems, itemsPrice, clear }) => {
         </form>
       )}
     </>
-  );
 };

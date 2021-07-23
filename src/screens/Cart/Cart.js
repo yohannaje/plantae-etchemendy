@@ -10,7 +10,6 @@ export const Cart = () => {
   const { cartItems } = useContext(CartContext);
   const { removeItem } = useContext(CartContext);
   const { clear } = useContext(CartContext);
-
   const itemsQty = cartItems.reduce(
     (total, products) => total + products.quantity,
     0
