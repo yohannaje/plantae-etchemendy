@@ -8,7 +8,7 @@ En el proyecto se puede navegar entre las distintas categorías y ver el detalle
 
 En el carrito se puede eliminar algun item si es necesario, y se puede generar la orden de compra, obteniendo el valor de esta al final del proceso.
 
-# Demo
+## Demo
 
 <img src="https://media2.giphy.com/media/fW8zzuyMB4suNE6BUP/giphy.gif" alt="gif de agregado de items al carrito">
 <br>
@@ -18,7 +18,7 @@ En el carrito se puede eliminar algun item si es necesario, y se puede generar l
 
 <a href="https://gifted-northcutt-98918e.netlify.app"> Live Site </a>
 
-# Aspectos Técnicos
+## Aspectos Técnicos
 
 Como componentes extra use el NavLink para poder estilar mas facilmente los links en la navegación y asi conseguir los active states. También use el componente Redirect para poder ir al final de la compra.
 
