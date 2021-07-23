@@ -29,12 +29,12 @@ export const ItemDetail = ({ product }) => {
               <button className="purchaseButton">Finalizar Compra</button>
             </Link>
             <br></br>
-            <button
-              className="backButton"
-              onClick={(e) => showEndPurchase(false)}
-            >
-              Atras
+            <Link to="/">
+            <button className="backButton" >
+              Seguir Comprando
             </button>
+            </Link>
+            
           </div>
         ) : (
           <div>
