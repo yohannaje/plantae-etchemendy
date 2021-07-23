@@ -103,9 +103,9 @@ export const Form = ({ cartItems, itemsPrice, clear }) => {
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="+59 9 11 123 456 "
+              placeholder="+54 911 68228048"
               id="phone"
-              type="text"
+              type="tel"
               autoComplete="phone"
               enterKeyHint="next"
             />

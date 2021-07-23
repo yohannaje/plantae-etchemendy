@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  margin-top: 3em;
+  margin: 3em;
 }
 
 .itemListContainer h1 {
@@ -34,4 +34,11 @@
 .ListContainer img {
   height: 12em;
   width: inherit;
+}
+
+/*tablet  */
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .itemListContainer {
+    padding-bottom: 13em;
+  }
 }

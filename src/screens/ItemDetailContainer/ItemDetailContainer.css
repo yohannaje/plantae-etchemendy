@@ -108,28 +108,9 @@
   padding-right: 2em;
   margin-left: 1em;
 }
-
-/*mobile  */
-@media screen and (max-width: 640px) {
-  .productDetail {
-    flex-flow: column wrap;
-  }
-
-  .productDetail img {
-    margin-left: 0;
-    width: inherit;
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-
-  .prodinfo {
-    width: inherit !important;
-    margin-left: 0;
-    padding-left: 3em;
-    padding-right: 3em;
-  }
+.buttonCounter {
+  color: white;
 }
-
 /*tablet  */
 @media screen and (min-width: 640px) and (max-width: 1280px) {
   .productDetail {
@@ -157,15 +138,27 @@
 
 /*mobile  */
 @media screen and (max-width: 640px) {
-  .productDetail img {
+  .productDetail {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+  .prodinfo {
+    width: 80%;
     margin-left: 0;
-    width: inherit;
-    max-width: 500px;
-    height: auto;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2em;
+  }
+  .prodimg {
+    margin-left: 0 !important;
+    width: 80%;
+    max-height: 300px;
+    padding-left: 2em;
   }
   .pricediv img {
     padding: 0 !important;
+  }
+
+  .counterGroup div {
+    flex-flow: column wrap;
   }
 }

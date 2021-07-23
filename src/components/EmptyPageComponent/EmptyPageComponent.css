@@ -39,3 +39,10 @@
   width: 40%;
   margin-bottom: 2em;
 }
+
+/*mobile  */
+@media screen and (max-width: 640px) {
+  .emptyPage h1 {
+    line-height: 1em;
+  }
+}

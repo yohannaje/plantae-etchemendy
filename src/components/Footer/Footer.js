@@ -5,7 +5,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
 export const Footer = () => {
-  return <section className="footer">
+  return <footer className="footer">
       <div>
         <ul>
           <li>
@@ -22,5 +22,5 @@ export const Footer = () => {
       <div>
         <p>Copyright - Plantae 2021</p>
       </div>
-    </section>
+    </footer>
 };

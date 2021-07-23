@@ -1,7 +1,7 @@
 import { React, useContext, useState } from "react";
 import { TagWidget } from "../../components/NavBar/TagWidget/TagWidget.js";
 import { Link } from "react-router-dom";
-import { ItemCount } from "../../components/Items/ItemCount/ItemCount.js";
+import { ItemCount } from "./ItemCount.js";
 import { CartContext } from "../Cart/CartContext.js";
 
 export const ItemDetail = ({ product }) => {

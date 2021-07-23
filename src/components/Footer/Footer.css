@@ -2,12 +2,18 @@
   background-color: #21475a;
   display: flex;
   color: white;
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   justify-content: space-between;
-  margin-top: 5em;
-  margin-bottom: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 5em !important;
 }
-
+.footer ul {
+  padding: 0;
+  margin-left: 2em;
+}
 .footer ul li {
   text-decoration: none;
   display: inline-block;
@@ -16,4 +22,30 @@
 
 .footer p {
   margin-right: 2em;
+}
+
+/*tablet  */
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .footer {
+    position: fixed;
+  }
+  body {
+    position: relative;
+    height: 100vh;
+  }
+}
+
+/*mobile  */
+@media screen and (max-width: 640px) {
+  .footer {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+  .footer ul {
+    margin-left: 1.5em;
+  }
 }
