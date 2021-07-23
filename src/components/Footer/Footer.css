@@ -27,11 +27,7 @@
 /*tablet  */
 @media screen and (min-width: 640px) and (max-width: 1280px) {
   .footer {
-    position: fixed;
-  }
-  body {
-    position: relative;
-    height: 100vh;
+    margin-top: 18em !important;
   }
 }
 

@@ -52,7 +52,13 @@
     width: inherit;
   }
   .navLogo {
-    display: none;
+    width: 32px;
+  }
+  .navLinks a {
+    font-size: 0.7em;
+  }
+  .navLinks ul {
+    padding-left: 0;
   }
   .userWidget {
     display: none;

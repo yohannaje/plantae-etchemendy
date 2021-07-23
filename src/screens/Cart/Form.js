@@ -21,8 +21,6 @@ export const Form = ({ cartItems, itemsPrice, clear }) => {
       mail: mail,
     };
 
-    console.log(cartItems);
-
     const itemsToUpdate = dataBase.collection("items").where(
       firebase.firestore.FieldPath.documentId(),
       "in",

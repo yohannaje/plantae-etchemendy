@@ -44,5 +44,10 @@
 @media screen and (max-width: 640px) {
   .emptyPage h1 {
     line-height: 1em;
+    width: 90%;
+    font-size: 1.8em;
+  }
+  .emptyPage p {
+    width: 70%;
   }
 }

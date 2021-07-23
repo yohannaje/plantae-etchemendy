@@ -52,7 +52,9 @@ export const ItemListContainer = () => {
             <Loader />
           </div>
         )}
+        
       </div>
       <Footer />
+      
     </>
 };

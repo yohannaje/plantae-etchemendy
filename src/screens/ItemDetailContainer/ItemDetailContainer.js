@@ -37,7 +37,7 @@ export const ItemDetailContainer = () => {
             className="emptyCart"
             imgUrl="https://i.ibb.co/m9GFpqH/Artboard-1-2x.png"
             altText="item no encontrado"
-            h1="Oops, ese producto no existe"
+            h1="Oops, no pudimos encontrar este producto"
             link="/"
             btnText="Volver al Home"
           />
