@@ -47,18 +47,14 @@ export const CartProvider = ({ children }) => {
   };
 
   const calculateCartTotal = () => {
-		const total = cartItems.reduce((total, items) => {
-			return total + items.quantity;
-		}, 0);
+		const total = cartItems.reduce((total,items)=> total + items.quantity, 0)
 		return total;
 	};
 
   useEffect(() => {
-		async function getCartTotal() {
-			const quantity = await calculateCartTotal();
+			const quantity = calculateCartTotal();
 			setCartTotal(quantity);
-		}
-		getCartTotal();
+
 	}, [cartItems]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return <CartContext.Provider
