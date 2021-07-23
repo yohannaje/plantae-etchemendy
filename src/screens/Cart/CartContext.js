@@ -4,7 +4,7 @@ export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-	const [cartTotal, setCartTotal] = useState(0)
+	const [cartTotal, setCartTotal] = useState(0);
 
   function addItem(product, cantItems) {
     if (isInCart(product.id)) {
@@ -46,18 +46,9 @@ export const CartProvider = ({ children }) => {
     return foundItem;
   };
 
-  const itemsQty = cartItems.reduce(
-    (total, products) => total + products.quantity,
-    0
-  );
-  const itemsPrice = cartItems.reduce(
-    (total, products) => total + products.item.price * products.quantity,
-    0
-  );
-
   const calculateCartTotal = () => {
-		const total = cartItems.reduce((summatory, items) => {
-			return summatory + items.quantity;
+		const total = cartItems.reduce((total, items) => {
+			return total + items.quantity;
 		}, 0);
 		return total;
 	};
@@ -71,7 +62,7 @@ export const CartProvider = ({ children }) => {
 	}, [cartItems]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return <CartContext.Provider
-      value={{ addItem, updateItem, removeItem, clear, cartItems, cartTotal, itemsPrice, itemsQty }}
+      value={{ addItem, updateItem, removeItem, clear, cartItems, cartTotal}}
     >
       {children}
     </CartContext.Provider>

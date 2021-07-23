@@ -10,8 +10,15 @@ export const Cart = () => {
   const { cartItems } = useContext(CartContext);
   const { removeItem } = useContext(CartContext);
   const { clear } = useContext(CartContext);
-  const { itemsQty } = useContext(CartContext);
-  const { itemsPrice } =useContext(CartContext);
+
+  const itemsQty = cartItems.reduce(
+    (total, products) => total + products.quantity,
+    0
+  );
+  const itemsPrice = cartItems.reduce(
+    (total, products) => total + products.item.price * products.quantity,
+    0
+  );
 
   return <div className="cartContainer">
       {cartItems.length === 0 ? (
